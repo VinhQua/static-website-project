@@ -1,13 +1,22 @@
 /******** GLOBAL STYLES ********/
+html{
+	font-size: 14.4px;
+}
 body {
 	font-family: 'Montserrat', Helvetica, Arial, sans-serif;
-	font-size: 16px;
 	color: #000000;
+
+
 }
 
 /* The width property has been changed to max-width */
 .content-wrapper {
+	margin: auto;
 	max-width: 1200px;
+	width: 90%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
 
 }
 
@@ -20,35 +29,37 @@ h4 {
 }
 
 h1 {
-	font-size: 30px;
+	font-size: 1.875rem;
 }
 
 h2 {
-	font-size: 24px;
+	font-size: 1.5rem;
 }
 
 h3 {
-	font-size: 20px;
+	font-size: 1.25rem;
 }
 
 h4 {
-	font-size: 12px;
+	font-size: .75rem;
 }
 
 p {
-	line-height: 36px;
+	line-height: 2.25rem;
 }
 
 /******** HEADER STYLES ********/
 /* The widths are in a percentage! */
 header {
+	justify-content: center;
 
 }
 
 header h1 {
 
 	margin: 0;
-	padding: 38px 0;
+	padding-top: 2.375rem;
+	padding-bottom: 1.25rem;
 }
 
 header h1 span {
@@ -56,41 +67,52 @@ header h1 span {
 }
 
 header nav {
-
-	padding: 46px 0;
+	width: 100%;
+	border-top: .188rem solid #77A466;
+	padding: 1.25rem 0;
 }
 
 header nav ul {
 	margin: 0;
 	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	flex-flow: row wrap;
+	align-content: space-around;
 }
 
 header nav ul li {
-
-	font-size: 14px;
+	width: 100%;
+	font-size: .875rem;
 	font-weight: 700;
 	text-transform: uppercase;
-	padding: 0 10px;
+	padding: 0 .625rem;
+	margin: .625rem 0;
+
 }
 
 header nav ul li a {
 	text-decoration: none;
 	color: #45610E;
+	
 }
 
 /********  MAIN STYLES ********/
 /******** TOP SECTION ********/
 /* The widths are in a percentage! */
+
 .main-image img {
 	width: 100%;
-	border-top: 3px solid #77A466;
-	border-bottom: 3px solid #77a466;
+	border-top: .188rem solid #77A466;
+	border-bottom: .188rem solid #77a466;
 }
 
 
 .main-title h2 {
 	color: #45610E;
-	padding: 5px 0;
+	padding: .313rem 0;
 }
 
 /******** BOTTOM SECTION ********/
@@ -100,8 +122,8 @@ header nav ul li a {
 }
 
 .bottom-section .content-wrapper {
-	border-top: 5px solid #EEE;
-	border-bottom: 5px solid #EEE;
+	border-top: .313rem solid #EEE;
+	border-bottom: .313rem solid #EEE;
 }
 
 .section-one,
@@ -109,25 +131,25 @@ header nav ul li a {
 .section-three {
 	box-sizing: border-box;
 
-	padding: 0 40px;
+	padding: 0 2.5rem;
 }
 
 .section-one {
-	width: 29%;
+	width: 100%;
 }
 
 .section-two {
-	width: 42%;
-	border-left: 5px solid #EEE;
-	border-right: 5px solid #EEE;
+	width: 100%;
+	border-top: .313rem solid #EEE;
+	border-bottom: .313rem solid #EEE;
 }
 
 .section-three {
-	width: 29%;
+	width: 100%;
 }
 
 .bottom-section h3 {
-	margin: 30px 0;
+	margin: 1.875rem 0;
 }
 
 .menu-list {
@@ -137,20 +159,103 @@ header nav ul li a {
 
 .menu-list li {
 	color: #45610E;
-	font-size: 16px;
-	line-height: 36px;
+	font-size: 1rem;
+	line-height: 2.25rem;
 }
 
 /******** FOOTER STYLES ********/
 /* The widths are in a percentage! */
 footer {
 	text-align: center;
-	margin-top: 8px;
+	margin-top: .5rem;
 }
 
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #45610E;
-	font-size: 14px;
+	font-size: .875rem;
+}
+
+
+
+
+
+
+
+
+
+
+/*-------------Media Querries-----------*/
+
+/*-------------For Tablet Screen 768px Or Wider-----------*/
+@media (min-width:768px) {
+	.bottom-section .content-wrapper{
+		display: flex;
+		justify-content: space-between;
+	}
+	.section-one,
+	.section-two,
+	.section-three{
+		width: 30%;
+		padding:0 1rem ;
+	
+	}
+	.section-two{
+		border: none;
+		border-left: .313rem solid #EEE;
+		border-right: .313rem solid #EEE;
+		padding: 0 2.5rem;
+		width: 40%;
+	}
+	
+}
+@media (min-width:1200px) {
+	html{
+		font-size: 16px;
+	}
+	header .content-wrapper{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom:1rem ;
+	}
+	header  .content-wrapper h1{
+		width: 25%;
+	}
+	header  .content-wrapper nav{
+		width: 20%;
+		border: none;
+		
+	
+	}
+	header  .content-wrapper nav ul{
+		display: flex;
+		justify-content: space-between;
+	}
+	header  .content-wrapper nav ul li{
+		width: 29%;
+		margin: 0;
+		padding: .1rem .1rem;
+		text-align: center;
+	}
+	.bottom-section .content-wrapper{
+		display: flex;
+		justify-content: space-between;
+	}
+	.section-one,
+	.section-two,
+	.section-three{
+		width: 30%;
+		padding:0 1rem ;
+	
+	}
+	.section-two{
+		border: none;
+		border-left: .313rem solid #EEE;
+		border-right: .313rem solid #EEE;
+		padding: 0 2.5rem;
+		width: 40%;
+	}
+	
 }
