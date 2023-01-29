@@ -124,6 +124,10 @@ header nav ul li a {
 .bottom-section .content-wrapper {
 	border-top: .313rem solid #EEE;
 	border-bottom: .313rem solid #EEE;
+	display: flex;
+	align-items: flex-start;
+	width: 90%;
+	margin: auto;
 }
 
 .section-one,
@@ -131,7 +135,6 @@ header nav ul li a {
 .section-three {
 	box-sizing: border-box;
 
-	padding: 0 2.5rem;
 }
 
 .section-one {
@@ -193,19 +196,20 @@ footer span {
 	.bottom-section .content-wrapper{
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-start;
 	}
 	.section-one,
 	.section-two,
 	.section-three{
 		width: 30%;
-		padding:0 1rem ;
+		padding-left: .5rem ;
 	
 	}
 	.section-two{
 		border: none;
 		border-left: .313rem solid #EEE;
 		border-right: .313rem solid #EEE;
-		padding: 0 2.5rem;
+		padding-left:  2rem;
 		width: 40%;
 	}
 	
@@ -241,20 +245,22 @@ footer span {
 	}
 	.bottom-section .content-wrapper{
 		display: flex;
+		align-items:flex-start;
 		justify-content: space-between;
 	}
 	.section-one,
 	.section-two,
 	.section-three{
 		width: 30%;
-		padding:0 1rem ;
+
+		padding-left: 1rem;
 	
 	}
 	.section-two{
 		border: none;
 		border-left: .313rem solid #EEE;
 		border-right: .313rem solid #EEE;
-		padding: 0 2.5rem;
+		padding-left:  2rem;
 		width: 40%;
 	}
 	
